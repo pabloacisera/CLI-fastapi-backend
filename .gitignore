@@ -1,0 +1,117 @@
+# Entorno virtual
+env/
+venv/
+.venv/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+._*
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Logs y bases de datos
+*.log
+*.sqlite
+*.db
+*.sql
+
+# Archivos de entorno
+.env
+.env.local
+.env.dev
+.env.prod
+.env.test
+
+# FastAPI específico
+instance/
+.webassets-cache
+
+# Archivos de sistema
+Thumbs.db
+
+# Archivos de Jupyter Notebook
+.ipynb_checkpoints
+
+# Archivos de PyCharm
+.idea/
+
+# Archivos de VS Code
+.vscode/
+*.code-workspace
+
+# Archivos de macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Archivos de Windows
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+*~
+~$*
+
+# Archivos de documentación
+docs/_build/
+
+# Archivos de package
+*.gz
+*.tgz
+*.zip
+*.rar
+
+# Archivos de desarrollo personalizados
+local_settings.py
+docker-compose.override.yml
+
+# Archivos de Docker
+docker-compose.yml
+!docker-compose.prod.yml
+.dockerignore
+
+# Archivos de SQLite (si usas SQLite en desarrollo)
+*.sqlite3
