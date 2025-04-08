@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import engine
 from routes.auth import AuthRouter
+from routes.owner import OwnerRouter
+from routes.property import PropertyRouter
 import models
 
 #crear tablas(development)
@@ -19,4 +21,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+print(AuthRouter)
+
 app.include_router(AuthRouter)
+app.include_router(OwnerRouter)
+app.include_router(PropertyRouter)

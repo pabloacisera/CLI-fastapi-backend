@@ -1,7 +1,7 @@
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 from models import User
-from schemas import UserCreate, UserLogin, RegisterResponse, LoginResponse
+from schemas.auth_schema import UserCreate, UserLogin, RegisterResponse, LoginResponse
 from auth import get_password_hash, verify_password, create_access_token
 
 def register(user: UserCreate, db: Session) -> RegisterResponse:
