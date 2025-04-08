@@ -15,6 +15,6 @@ class Settings:
     MYSQL_DATABASE=os.getenv("MYSQL_DB", "facture_app")
     SECRET_KEY=os.getenv("SECRET_KEY")
     ALGORITHM=os.getenv("ALGORITHM", "HS256")
-    EXPIRES_IN=os.getenv("EXPIRES_IN", "30")
+    EXPIRES_IN=int(os.getenv("EXPIRES_IN", 30))
 
 settings = Settings()

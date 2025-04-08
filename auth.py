@@ -1,6 +1,6 @@
 from passlib.context import CryptContext
-from datetime import datetime, timezone,timedelta
-from config import settings
+from datetime import datetime, timezone, timedelta
+from config import settings  # Asegúrate de que 'config' esté correctamente configurado
 from jose import jwt
 
 pwd_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
@@ -13,8 +13,14 @@ def get_password_hash(password) -> str:
 
 def create_access_token(data: dict) -> str:
     to_encode = data.copy()
-    expire = datetime.now(timezone()) + timedelta(minutes=settings.EXPIRES_IN)
+    
+    # Establecemos la expiración con zona horaria UTC
+    expire = datetime.now(timezone.utc) + timedelta(minutes=settings.EXPIRES_IN)
+    
+    # Agregamos la expiración al payload
     to_encode.update({
         "exp": expire
     })
+    
+    # Retornamos el token codificado
     return jwt.encode(to_encode, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
